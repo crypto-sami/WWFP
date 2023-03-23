@@ -17,5 +17,13 @@ def test_avg(results, test, students):
 def high_score(results, test, students):
     score = 0
     for i in range(students):
-        if results[i][test] > score:
-            score = results[i][test]
+        if int((results[i][test])) > score:
+            score = int((results[i][test]))
+    return(score)
+
+def low_score(results, test, students):
+    score = 100
+    for i in range(students):
+        if int((results[i][test])) < score:
+            score = int((results[i][test]))
+    return(score)
