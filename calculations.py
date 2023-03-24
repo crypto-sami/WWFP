@@ -27,3 +27,4 @@ def low_score(results, test, students):
         if int((results[i][test])) < score:
             score = int((results[i][test]))
     return(score)
+
