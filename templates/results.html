@@ -6,8 +6,27 @@
 </head>
 
 <body>
-  <h1>{{ max_score1 }} Was the highest score for test 1</h1>
-  <h1>{{ max_score2 }} Was the highest score for test 2</h1>
-  <h1>{{ max_score3 }} Was the highest score for test 3</h1>
+  <h1>Highest Scores</h1>
+  <ul>
+  {% for test in range(tests-1) %}
+    <li>{{ data_high[test] }} was the highest score for test {{ test+1 }}</li>
+  {% endfor %}
+  </ul>
+
+  <h1>Lowest Scores</h1>
+  <ul>
+  {% for test in range(tests-1) %}
+    <li>{{ data_low[test] }} was the lowest score for test {{ test+1 }}</li>
+  {% endfor %}
+  </ul>
+
+  <h1>Average Scores</h1>
+  <ul>
+  {% for test in range(tests-1) %}
+    <li>{{ data_avg[test] }} was the lowest score for test {{ test+1 }}</li>
+  {% endfor %}
+  </ul>
+  
+  
 </body>
 </html>
