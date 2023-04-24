@@ -4,10 +4,10 @@ from calculations import list_low, list_high, list_average, data
 
 filename = 'output.html'
 environment = Environment(loader=FileSystemLoader("templates/"))
-template = environment.get_template("results.html")
+template = environment.get_template("template.html")
 
-results_filename = "output.html"
-results_template = environment.get_template("results.html")
+results_filename = "templates/output.html"
+results_template = environment.get_template("template.html")
 context = {
     "tests": len(data),
     "data_low": list_low,
